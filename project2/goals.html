@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitTrack | Goals</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html"><b>F</b> FitTrack</a>
+      <small>WORKSPACE</small>
+      <nav>
+        <a href="dashboard.html">⌂ Dashboard</a>
+        <a href="workouts.html">↗ Workout tracker</a>
+        <a href="tutorials.html">▷ Exercise tutorials</a>
+        <a class="active" href="goals.html">◎ Fitness goals</a>
+        <a href="progress.html">▥ Progress & history</a>
+      </nav>
+      <button class="navlogout" data-logout>↪ Log out</button>
+    </aside>
+
+    <main class="main">
+      <header>
+        <button id="menuToggle" class="menu">☰</button>
+        <div>
+          <small>MAKE IT PERSONAL</small>
+          <h1>Fitness goals</h1>
+        </div>
+      </header>
+
+      <p class="muted">Choose a realistic goal and take it one step at a time.</p>
+
+      <section class="panel">
+        <h2>Create a fitness goal</h2>
+
+        <form id="goalForm" class="formgrid">
+          <div class="wide">
+            <label>Goal title</label>
+            <input id="goalTitle" required placeholder="Build workout consistency" />
+          </div>
+
+          <div>
+            <label>Goal type</label>
+            <select id="goalType" required>
+              <option value="">Choose type</option>
+              <option>Strength</option>
+              <option>Weight management</option>
+              <option>Endurance</option>
+              <option>Consistency</option>
+              <option>General fitness</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Target</label>
+            <input id="goalTarget" required placeholder="4 workouts per week" />
+          </div>
+
+          <div>
+            <label>Target date</label>
+            <input id="goalDate" type="date" required />
+          </div>
+
+          <div class="wide">
+            <button class="primary">Add goal →</button>
+            <p class="note">Demo only; goals are not stored permanently.</p>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h3>My goals</h3>
+        <div id="goalsList" class="goalitems">No goals yet.</div>
+      </section>
+
+      <footer>FitTrack · Your fitness, your pace.</footer>
+    </main>
+
+    <div class="overlay" id="logoutModal" hidden>
+      <section class="modal">
+        <h2>Log out of FitTrack?</h2>
+        <p>Are you sure you want to log out?</p>
+        <button id="cancelLogout" class="secondary">No, stay here</button>
+        <button id="confirmLogout" class="primary">Yes, log out</button>
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

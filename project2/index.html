@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitTrack | Sign In</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="auth">
+    <section class="hero">
+      <a class="brand" href="index.html"><b>F</b> FitTrack</a>
+      <div>
+        <small>YOUR FITNESS. YOUR PACE.</small>
+        <h1>Small steps.<br /><em>Stronger you.</em></h1>
+        <p>Track your workouts, build consistency, and see your progress one session at a time.</p>
+      </div>
+      <footer>A simple fitness companion for every gym-goer.</footer>
+    </section>
+
+    <main class="authbox">
+      <div class="mobilebrand">🟣 FitTrack</div>
+      <small>WELCOME BACK</small>
+      <h2>Sign in to FitTrack</h2>
+      <p class="muted">Keep showing up for yourself.</p>
+
+      <form id="loginForm">
+        <label>Email address</label>
+        <input id="email" type="email" placeholder="you@example.com" required />
+
+        <label>Password</label>
+        <input id="password" type="password" minlength="6" placeholder="At least 6 characters" required />
+
+        <button class="primary">Sign in →</button>
+      </form>
+
+      <p class="switch">New to FitTrack? <a href="register.html">Create an account</a></p>
+      <p class="note">Frontend demo only. Login is not connected to a database.</p>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

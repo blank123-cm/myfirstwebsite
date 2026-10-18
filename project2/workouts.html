@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitTrack | Workouts</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html"><b>F</b> FitTrack</a>
+      <small>WORKSPACE</small>
+      <nav>
+        <a href="dashboard.html">⌂ Dashboard</a>
+        <a class="active" href="workouts.html">↗ Workout tracker</a>
+        <a href="tutorials.html">▷ Exercise tutorials</a>
+        <a href="goals.html">◎ Fitness goals</a>
+        <a href="progress.html">▥ Progress & history</a>
+      </nav>
+      <button class="navlogout" data-logout>↪ Log out</button>
+    </aside>
+
+    <main class="main">
+      <header>
+        <button id="menuToggle" class="menu">☰</button>
+        <div>
+          <small>TRACK YOUR EFFORT</small>
+          <h1>Workout tracker</h1>
+        </div>
+      </header>
+
+      <section class="panel">
+        <small>NEW WORKOUT</small>
+        <h2>Record your workout</h2>
+
+        <form id="workoutForm" class="formgrid">
+          <div>
+            <label>Date</label>
+            <input id="date" type="date" required />
+          </div>
+          <div>
+            <label>Duration (minutes)</label>
+            <input id="duration" type="number" min="1" required placeholder="45" />
+          </div>
+          <div>
+            <label>Exercise</label>
+            <input id="exercise" required placeholder="Bench press" />
+          </div>
+          <div>
+            <label>Muscle group</label>
+            <select id="muscle" required>
+              <option value="">Choose group</option>
+              <option>Chest</option>
+              <option>Back</option>
+              <option>Shoulders</option>
+              <option>Biceps</option>
+              <option>Triceps</option>
+              <option>Legs</option>
+              <option>Core</option>
+              <option>Full body</option>
+            </select>
+          </div>
+          <div>
+            <label>Sets</label>
+            <input id="sets" type="number" min="1" required />
+          </div>
+          <div>
+            <label>Reps per set</label>
+            <input id="reps" type="number" min="1" required />
+          </div>
+          <div>
+            <label>Weight (kg)</label>
+            <input id="weight" type="number" min="0" step=".5" required />
+          </div>
+          <div class="wide">
+            <label>Notes (optional)</label>
+            <textarea id="notes" rows="3" placeholder="How did the workout feel?"></textarea>
+          </div>
+          <div class="wide">
+            <button class="primary">Add workout (demo) →</button>
+            <p class="note">Temporary browser-session data only. No MySQL connection yet.</p>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <small>YOUR LOG</small>
+        <h3>Workout entries</h3>
+
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Exercise</th>
+                <th>Sets × Reps</th>
+                <th>Weight</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody id="workoutRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer>FitTrack · Your fitness, your pace.</footer>
+    </main>
+
+    <div class="overlay" id="logoutModal" hidden>
+      <section class="modal">
+        <h2>Log out of FitTrack?</h2>
+        <p>Are you sure you want to log out?</p>
+        <button id="cancelLogout" class="secondary">No, stay here</button>
+        <button id="confirmLogout" class="primary">Yes, log out</button>
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

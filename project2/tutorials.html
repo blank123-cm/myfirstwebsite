@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitTrack | Tutorials</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html"><b>F</b> FitTrack</a>
+      <small>WORKSPACE</small>
+      <nav>
+        <a href="dashboard.html">⌂ Dashboard</a>
+        <a href="workouts.html">↗ Workout tracker</a>
+        <a class="active" href="tutorials.html">▷ Exercise tutorials</a>
+        <a href="goals.html">◎ Fitness goals</a>
+        <a href="progress.html">▥ Progress & history</a>
+      </nav>
+      <button class="navlogout" data-logout>↪ Log out</button>
+    </aside>
+
+    <main class="main">
+      <header>
+        <button id="menuToggle" class="menu">☰</button>
+        <div>
+          <small>LEARN THE MOVEMENT</small>
+          <h1>Exercise tutorials</h1>
+        </div>
+      </header>
+
+      <p class="muted">Beginner-friendly reminders for proper exercise technique.</p>
+
+      <div class="filters">
+        <input id="tutorialSearch" placeholder="Search exercises..." />
+        <select id="categoryFilter">
+          <option value="all">All muscle groups</option>
+          <option>Chest</option>
+          <option>Back</option>
+          <option>Legs</option>
+          <option>Biceps</option>
+          <option>Core</option>
+        </select>
+      </div>
+
+      <section class="cards" id="tutorialGrid">
+        <article data-category="Chest" data-name="push-up">
+          <div class="visual purplebg">CHEST <strong>01</strong><b>↗</b></div>
+          <h3>Push-up</h3>
+          <p>Keep your body straight and lower with control.</p>
+          <button class="secondary video-demo" data-exercise="Push-up">View tutorial</button>
+        </article>
+
+        <article data-category="Back" data-name="dumbbell row">
+          <div class="visual orangebg">BACK <strong>02</strong><b>↔</b></div>
+          <h3>Dumbbell row</h3>
+          <p>Keep your back neutral and pull toward your hip.</p>
+          <button class="secondary video-demo" data-exercise="Dumbbell row">View tutorial</button>
+        </article>
+
+        <article data-category="Legs" data-name="squat">
+          <div class="visual greenbg">LEGS <strong>03</strong><b>↓</b></div>
+          <h3>Bodyweight squat</h3>
+          <p>Keep your heels grounded and brace your core.</p>
+          <button class="secondary video-demo" data-exercise="Bodyweight squat">View tutorial</button>
+        </article>
+
+        <article data-category="Biceps" data-name="biceps curl">
+          <div class="visual bluebg">BICEPS <strong>04</strong><b>⌁</b></div>
+          <h3>Biceps curl</h3>
+          <p>Keep elbows near your sides and avoid swinging.</p>
+          <button class="secondary video-demo" data-exercise="Biceps curl">View tutorial</button>
+        </article>
+
+        <article data-category="Core" data-name="plank">
+          <div class="visual darkbg">CORE <strong>05</strong><b>—</b></div>
+          <h3>Plank</h3>
+          <p>Keep a straight line from head to heels and breathe steadily.</p>
+          <button class="secondary video-demo" data-exercise="Plank">View tutorial</button>
+        </article>
+      </section>
+
+      <footer>FitTrack · Your fitness, your pace.</footer>
+    </main>
+
+    <div class="overlay" id="logoutModal" hidden>
+      <section class="modal">
+        <h2>Log out of FitTrack?</h2>
+        <p>Are you sure you want to log out?</p>
+        <button id="cancelLogout" class="secondary">No, stay here</button>
+        <button id="confirmLogout" class="primary">Yes, log out</button>
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

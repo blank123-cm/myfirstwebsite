@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitTrack | Progress</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html"><b>F</b> FitTrack</a>
+      <small>WORKSPACE</small>
+      <nav>
+        <a href="dashboard.html">⌂ Dashboard</a>
+        <a href="workouts.html">↗ Workout tracker</a>
+        <a href="tutorials.html">▷ Exercise tutorials</a>
+        <a href="goals.html">◎ Fitness goals</a>
+        <a class="active" href="progress.html">▥ Progress & history</a>
+      </nav>
+      <button class="navlogout" data-logout>↪ Log out</button>
+    </aside>
+
+    <main class="main">
+      <header>
+        <button id="menuToggle" class="menu">☰</button>
+        <div>
+          <small>YOUR JOURNEY SO FAR</small>
+          <h1>Progress & history</h1>
+        </div>
+      </header>
+
+      <p class="muted">Review your recorded activity and keep an eye on your consistency.</p>
+
+      <section class="stats">
+        <article>
+          <small>Workouts logged</small>
+          <h2 id="progressCount">0</h2>
+        </article>
+        <article>
+          <small>Training time</small>
+          <h2 id="progressMinutes">0 mins</h2>
+        </article>
+        <article>
+          <small>Goals created</small>
+          <h2 id="progressGoals">0</h2>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h3>Workout history</h3>
+
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Exercise</th>
+                <th>Sets × Reps</th>
+                <th>Weight</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody id="historyRows"></tbody>
+          </table>
+        </div>
+
+        <p class="note">Prototype only: entries are temporary browser-session data, not MySQL records.</p>
+        <a class="secondary inline" href="workouts.html">Add workout</a>
+      </section>
+
+      <footer>FitTrack · Your fitness, your pace.</footer>
+    </main>
+
+    <div class="overlay" id="logoutModal" hidden>
+      <section class="modal">
+        <h2>Log out of FitTrack?</h2>
+        <p>Are you sure you want to log out?</p>
+        <button id="cancelLogout" class="secondary">No, stay here</button>
+        <button id="confirmLogout" class="primary">Yes, log out</button>
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
